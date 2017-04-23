@@ -9,7 +9,7 @@ The data is divided into multiple files based on the year in which loan was issu
 
 A single function is written which can download accepted data files from 2007-2016 as .csv. All the csv files will then be concatenated to a single Concatenated.csv file. The data will be extracted and downladed in a folder Data. Further we read these files in loan Dataframe.
 
-![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/downloadscript.png)
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/downloadnew.PNG)
 
 Part 2: Missing Value Handling
 
