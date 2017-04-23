@@ -189,7 +189,16 @@ This tells us that we need to form 4 groups.
 
 There are 4 groups Medium, Low, MedHigh, High for each of the columns in the dataset. The plots above show annual income vs other features. People with annual income between ~100000 and 130000 belong to group1. People with annual income between ~140000-180000 belong to group2.  People with annual income between ~200000 and 300000 belong to group3. People with annual income > 400000 belong to group4 and are labeled as high.  
 
-<<<<image>>>>
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/cluster_fico.PNG)
+
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/cluster_loanamnt.PNG)
+
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/cluster_term.PNG)
+
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/cluster_totalaccount.PNG)
+
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/clusterdti.PNG)
+
 
 ### Some key observations from the above plots:
 1. dti is less for people with high annual income.
