@@ -25,7 +25,6 @@ out_prncp - Gives future information
 out_prncp_inv - Gives future information
 total_pymnt_inv - Gives future information
 
-
 Columns Updated and cleaned:
 •	emp_length – As per the Data Dictionary, emp_length should have only values ranging from  0 to 10, whereas there were few records with value of “10+ years” and “<1 year”, which we replaced with 10 and 0 respectively. 
 
@@ -34,32 +33,26 @@ Columns Updated and cleaned:
 •	mths_since_last_delinq – This field shows the number of months passed by since a person was marked delinquent. Here, I made use of another column which is correlated to this column i.e. delinq_2yrs. If the value in delinq_2yrs = 0, that means there has been no delinquencies recorded for a person in the last 2 years. So, making use of this analysis, I replaced all the empty data of mths_since_last_delinq which has delinq_2yrs as 0, as 24 (resembling 2 years).
 
 •	mths_since_last_record – This field indicates the number of months passed by since a person had any public record. This value is provided by the Lender’s based on the data they have. All public record is noted and present in their database. Since, the field is left blank means, that a person doesn’t have any public record yet. So, I marked it as -1 to show that a person doesn’t have any public record.
-
 •	annual_inc – Annual income is empty just for 4 records in the data. On analyzing I found that all these 4 records don’t have any employer, which means that they don’t earn so we replaced all blanks by 0.
-
 •	delinq_2yrs – delinq_2yrs column has maximum of 39 and minimum of 0. On reading the data, I found that all the empty columns are for people who are not valid and does not meet the credit policy, so I replaced them by the mean.
 
 •	revol_util – These are the percent values, so I first stripped all the “%” and then replaced it by the mean percentage 
 
 
 •	delinq_amnt – 99.98% of the data is zero. Only negligible records have any other values, so I replaced it by zero
-
 •	pub_rec_bankruptcies – All the empty rows are the ones which do not meet the credit policy and all are non-verified. With only negligible blanks, I replaced it by mean.
 
 •	tax_liens – These are the same 29 empty records as pub_rec_bankruptcies and so we processed a new column as “derived_tax_liens”.
-
 •	Interest_rate – Stripped the “%” and converted object datatype to float , so that analysis can be done on top of that 
 •       term-replaced missing value with max term period(i.e. 60)
 •       replace missing values for home_ownership with OTHER
 
 
 
-Part 3: Data pre-processing
-Converting ‘issue_d’ to datetime format using pd.to_datetime
+Part 3: Data pre-processingConverting ‘issue_d’ to datetime format using pd.to_datetime
 I am creating new columns in the dataframe to store the below values:
 •	Issue month as issue_month
 •	Issue year as issue_year
-
 Derived Variables:
 I have derived the following variable
 
@@ -68,29 +61,30 @@ credit_age: This variable shows the duration since when the user is using credit
 Part 4: Exploratory Data Analysis
 1. Analysis 1: Loan volume trends by loan grade and year. Loan grade tells us how riskier the loan is. Loan grade A is least risky  and Loan G is the highest.
 There is rapid increase in Loan B and E grade. Grade will be an important parameter to determine if the person is going to default loan.
-<<<<<<<Image>>>> Loan grade
 
-2. Analysis 2: 
-Analysis of trends in loan amount vs year
+
+2. Analysis 2: Analysis of trends in loan amount vs year
 Increase in loan amount issued rapidly. There was a downfall during 2008-2010 due to economic depression.
-<<<<<Image>>>> Timeseries
+
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/timeseries.png)
 
 3. Analysis 3: Important to determine who will pay loan and who will default
 Meaning for each loan status-https://help.lendingclub.com/hc/en-us/articles/215488038
 
-<<<<<<Image>..
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/loan_status.PNG)
+
 Predicting default loans. From the above analysis,only the Fully Paid and Charged Off values describe the final outcome of the loan. The other values describe the loans that are still going on, and even though some loans are late on payment we cant classify them as Charged Off.
 Also, while the default status resembles the Charged Off Status, in Lending Club's eyes, loans that are charged off have essentially no chance of being repaid while default ones have a small chance. Therefore, we should use only samples where the loan_status column is 'Fully Paid' or 'Charged Off'.
 We are not interested in any statuses that indicate that the loan is ongoing or in progress, because predicting something in progress doesn't tell us anything.
 Since we are interested in being able to predict which of these 2 values a loan will fall under, we can treat the problem as binary classification.
 Let's remove all the loans that don't contain either 'Fully Paid' or 'Charged Off' as the loan's status and transform the 'Fully Paid' values to 1 for the posiive case and 'Charged Off' values to 0 for the negative case.
 
-<<<<<<Image>>>>default loans
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/pie_chart_loan_status.PNG)
 
 Conclusion: Significant number of borrowers in our dataset paid off their loan. 79.81% of loan borrowers paid off amount borrowed, while 20.19% unfortunately defaulted.
 
 4. Analysis 4: Wordcloud of purpose for which the loans were taken
-<<<<<<image>>>>wordcloud_purpose
+!alt tag(https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/word_cloud_loantitle.PNG)
 
 Wordcloud showing maximum loan amount by state. People from California and New York took maximum number of loans
 <<<<image>>>wordcloud_state
