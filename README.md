@@ -84,14 +84,16 @@ Let's remove all the loans that don't contain either 'Fully Paid' or 'Charged Of
 Conclusion: Significant number of borrowers in our dataset paid off their loan. 79.81% of loan borrowers paid off amount borrowed, while 20.19% unfortunately defaulted.
 
 4. Analysis 4: Wordcloud of purpose for which the loans were taken
-!alt tag(https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/word_cloud_loantitle.PNG)
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/word_cloud_loantitle.PNG)
 
 Wordcloud showing maximum loan amount by state. People from California and New York took maximum number of loans
-<<<<image>>>wordcloud_state
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/word_cloud_state.PNG)
+
+
 
 
 Wordcloud showing purpose for which loan was taken
-<<<<image>>>>
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/word_cloud_purpose.PNG)
 
 
 Distribution of employment length for issued loans
