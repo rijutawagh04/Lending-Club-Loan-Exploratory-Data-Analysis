@@ -1,6 +1,6 @@
 # Lending-Club-Loan-Exploratory-Data-Analysis
 
-Part 1: Data Download
+# Part 1: Data Download
 
 Our first step is to get the Lending club dataset from the Lending Club web site.
 To download the data that is available publicly from lending club site. https://www.lendingclub.com/info/download-data.action
@@ -11,7 +11,7 @@ A single function is written which can download accepted data files from 2007-20
 
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/downloadnew.PNG)
 
-Part 2: Missing Value Handling
+# Part 2: Missing Value Handling
 
 A. Checking for null values in the column and if the column contains more than 80% missing values, drop the column. Drop the columns which don't give any useful information for analysis.
 
@@ -50,7 +50,7 @@ Columns Updated and cleaned:
 
 
 
-Part 3: Data pre-processingConverting ‘issue_d’ to datetime format using pd.to_datetime
+# Part 3: Data pre-processingConverting ‘issue_d’ to datetime format using pd.to_datetime
 I am creating new columns in the dataframe to store the below values:
 
 •	Issue month as issue_month
@@ -60,18 +60,18 @@ I have derived the following variable
 
 credit_age: This variable shows the duration since when the user is using credit. It is calculated by subtracting the first date when credit was checked from the date when credit/loan was issued.
 
-Part 4: Exploratory Data Analysis
-1. Analysis 1: Loan volume trends by loan grade and year. Loan grade tells us how riskier the loan is. Loan grade A is least risky  and Loan G is the highest.
+# Part 4: Exploratory Data Analysis
+# 1.Analysis 1: Loan volume trends by loan grade and year. Loan grade tells us how riskier the loan is. Loan grade A is least risky  and Loan G is the highest.
 There is rapid increase in Loan B and E grade. Grade will be an important parameter to determine if the person is going to default loan.
 
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/gradetrends.PNG)
 
-2. Analysis 2: Analysis of trends in loan amount vs year
+# 2.Analysis 2: Analysis of trends in loan amount vs year
 Increase in loan amount issued rapidly. There was a downfall during 2008-2010 due to economic depression.
 
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/timeseries.png)
 
-Loan metrics by state showing the following:
+ Loan metrics by state showing the following:
 1. Average balance per borrower
 2. Average Employment term per borrower
 3. Average annual income per borrower
@@ -81,7 +81,7 @@ Loan metrics by state showing the following:
 
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/map2.PNG)
 
-3. Analysis 3: Important to determine who will pay loan and who will default
+# 3.Analysis 3: Important to determine who will pay loan and who will default
 Meaning for each loan status-https://help.lendingclub.com/hc/en-us/articles/215488038
 
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/loan_status.PNG)
@@ -96,7 +96,7 @@ Let's remove all the loans that don't contain either 'Fully Paid' or 'Charged Of
 
 Conclusion: Significant number of borrowers in our dataset paid off their loan. 79.81% of loan borrowers paid off amount borrowed, while 20.19% unfortunately defaulted.
 
-4. Analysis 4: Wordcloud of purpose for which the loans were taken
+# 4.Analysis 4: Wordcloud of purpose for which the loans were taken
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/word_cloud_loantitle.PNG)
 
 Wordcloud showing maximum loan amount by state. People from California and New York took maximum number of loans
@@ -112,10 +112,10 @@ Wordcloud showing purpose for which loan was taken
 Distribution of employment length for issued loans
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/empLength.PNG)
 
-
+  
 The maximum no of issued loans were for people having employment length geater than or equal to 10.
 
-5. Analysis 5:
+# 5.Analysis 5:
 I want to explore how various features affect interest rate so that they can be used to determine interest rate once the person is granted loan. We already have the accepted loan dataset and we can predict interest rate based on few variables. Thus, we will check which features are important to predict interest rate. So I need to get some basic statistics.
 
 Next, I will explore how all variables (loan amount, term, grade, employee length, home ownership, annual income, issue day, purpose, state, application type) affect interest rate.
@@ -124,7 +124,7 @@ It turns out that loan amount, employee length, annual income, home ownership,st
 The term, grade, purpose and application type would affect the interest rate to some extent.
 Thus, these variables can be used to predict interest rate. Lets take a look at these variables. 
 
-1. FICO
+# 1.FICO
 FICO scores are a credit score, or a number used by banks and credit cards to represent how credit-worthy a person is. A minimum FICO score of 600 is required in order to grant  a loan.
 
 When a borrower applies for a loan, Lending Club gets the borrowers credit score from FICO- they are given a lower and upper limit of the range that the borrower's score belongs to, and they store those values as fico_range_low, fico_range_high.
@@ -135,50 +135,49 @@ After that , any updates to the borrowers score are recorded as last_fico_range_
 
 CONCLUSION: Borrowers with high FICO scores tend to get lower interest rates on mortgages than borrowers with low credit scores. A credit score of 740 or higher qualifies for the best interest rates from most lenders. Thus, we can infer that interest rate is affected by FICO score.
 
-2. Term
+# 2.Term
 
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/termvsint_rate.PNG)
 
 CONCLUSION: The interest rate is more for a term of 60 months which is ~13-19% whereas for a term of 36 months, it is ~9-14%. Thus, interest rate is affected by the term
 
-3. Employment Length
+# 3.Employment Length
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/emp_lengthvsint_rate.PNG)
 CONCLUSION:The interest rate is more for employment length of 10years 
+ 
 
-
-4. Loan Amount
+# 4.Loan Amount
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/loanamntvsint_rate.PNG)
 CONCLUSION: Higher the loan amount, higher will be the interest rate.
 
-5. Annual Income
+# 5.Annual Income
 <<<<image>>>
 
-6.Home ownership
+# 6.Home ownership
 
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/homeownvsint_rate.PNG)
 
-7. Purpose
-![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/purposevsint_rate.PNG)
+# 7.Purpose![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/purposevsint_rate.PNG)
 
-8. Application Type
+# 8.Application Type
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/appltypevsintrate.PNG)
 
 
-9. Debt to Income Ratio
+# 9.Debt to Income Ratio
 
 Debt to income ratio represents the total amount of debt payments the borrower owes each month excluding mortgage (e.g. credit cards, student loans, car loans) divided by the stated monthly income. LendingClub only allows borrowers on their marketplace if DTI is < 35%¶
 Interest rate increases with increase in dti
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/dtivsintrate.PNG)
 
 
-10. Address State
+# 10.Address State
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/statevsintrate.PNG)
 
 
-CONCLUSION: It's very likely that you can get low interest rate if the term is 36 months, dti is low, the grade is low, the purpose is one of educational, car or credit card, the state is Missouri, and the type is "individual"!
+# CONCLUSION:It's very likely that you can get low interest rate if the term is 36 months, dti is low, the grade is low, the purpose is one of educational, car or credit card, the state is Missouri, and the type is "individual"!
 
 
-Analysis:Attempt to predict the interest rate charged to a group/cluster of loans.
+# Analysis:Attempt to predict the interest rate charged to a group/cluster of loans.
 
 ### Deciding how many groups to form based on Eucledian distance
 
@@ -200,7 +199,7 @@ There are 4 groups Medium, Low, MedHigh, High for each of the columns in the dat
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/clusterdti.PNG)
 
 
-### Some key observations from the above plots:
+## Some key observations from the above plots:
 1. dti is less for people with high annual income.
 2. Most number of people in the dataset have annual income >400000 and thus qualify to apply for loan
 3. Annual income increases with increase in employment length
