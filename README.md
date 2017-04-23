@@ -97,8 +97,8 @@ Wordcloud showing purpose for which loan was taken
 
 
 Distribution of employment length for issued loans
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/empLength.PNG)
 
-<<<<<image>>>>
 
 The maximum no of issued loans were for people having employment length geater than or equal to 10.
 
@@ -118,23 +118,23 @@ When a borrower applies for a loan, Lending Club gets the borrowers credit score
 
 After that , any updates to the borrowers score are recorded as last_fico_range_low and last_fico_range_high
 
-<<<<image>>>>
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/last_mean_ficovsint_ratescatter.PNG)
 
 CONCLUSION: Borrowers with high FICO scores tend to get lower interest rates on mortgages than borrowers with low credit scores. A credit score of 740 or higher qualifies for the best interest rates from most lenders. Thus, we can infer that interest rate is affected by FICO score.
 
 2. Term
 
-<<<<image>>>
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/termvsint_rate.PNG)
 
 CONCLUSION: The interest rate is more for a term of 60 months which is ~13-19% whereas for a term of 36 months, it is ~9-14%. Thus, interest rate is affected by the term
 
 3. Employment Length
-<<<<image>>>
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/emp_lengthvsint_rate.PNG)
 CONCLUSION:The interest rate is more for employment length of 10years 
 
 
 4. Loan Amount
-<<<<image>>>
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/loanamntvsint_rate.PNG)
 CONCLUSION: Higher the loan amount, higher will be the interest rate.
 
 5. Annual Income
@@ -142,24 +142,24 @@ CONCLUSION: Higher the loan amount, higher will be the interest rate.
 
 6.Home ownership
 
-<<image>>>
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/homeownvsint_rate.PNG)
 
 7. Purpose
-<<<<image>>>
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/purposevsint_rate.PNG)
 
 8. Application Type
-<<<<image>>>
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/appltypevsintrate.PNG)
 
 
 9. Debt to Income Ratio
 
 Debt to income ratio represents the total amount of debt payments the borrower owes each month excluding mortgage (e.g. credit cards, student loans, car loans) divided by the stated monthly income. LendingClub only allows borrowers on their marketplace if DTI is < 35%¶
 Interest rate increases with increase in dti
-<<<image>>>
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/dtivsintrate.PNG)
 
 
 10. Address State
-<<<<,image>>>
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/statevsintrate.PNG)
 
 
 CONCLUSION: It's very likely that you can get low interest rate if the term is 36 months, dti is low, the grade is low, the purpose is one of educational, car or credit card, the state is Missouri, and the type is "individual"!
@@ -169,7 +169,8 @@ Analysis:Attempt to predict the interest rate charged to a group/cluster of loan
 
 ### Deciding how many groups to form based on Eucledian distance
 
-<<<<image>>
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/noofgroupsplot.PNG)
+
 This tells us that we need to form 4 groups.
 
 
