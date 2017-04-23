@@ -22,7 +22,7 @@ url
 adesc
 zipcode- since it contains onlky 3 digits and we have address state as another column
 out_prncp - Gives future information
-out_prncp_inv - Gives future information
+https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/gradetrends.PNGout_prncp_inv - Gives future information
 total_pymnt_inv - Gives future information
 
 Columns Updated and cleaned:
@@ -64,6 +64,7 @@ Part 4: Exploratory Data Analysis
 1. Analysis 1: Loan volume trends by loan grade and year. Loan grade tells us how riskier the loan is. Loan grade A is least risky  and Loan G is the highest.
 There is rapid increase in Loan B and E grade. Grade will be an important parameter to determine if the person is going to default loan.
 
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/gradetrends.PNG)
 
 2. Analysis 2: Analysis of trends in loan amount vs year
 Increase in loan amount issued rapidly. There was a downfall during 2008-2010 due to economic depression.
