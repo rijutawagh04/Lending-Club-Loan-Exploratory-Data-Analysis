@@ -8,6 +8,11 @@
 Our first step is to get the Lending club dataset from the Lending Club web site.
 To download the data that is available publicly from lending club site. https://www.lendingclub.com/info/download-data.action
 
+The link contains files for complete loan data for all loans issued through the time period stated, including the current loan status (Current, Late, Fully Paid, etc.) and latest payment information
+
+
+The Data Dictionary attached in extras folder includes definitions for all the data attributes included in the Historical data file and the In Funding data file.
+
 The data is divided into multiple files based on the year in which loan was issued. To download multiple files in python we first need to get the URLs of all the files. For this we use urllib3 library. File name of all the files is fetched from the a hidden div variable. Hidden div for Accepted loan data is ‘loanStatsFileNamesJS’. This variable contains all the file names separated by ‘|’. From this names we form the URL and download the file using requests.get(url) method. Then we extract the downloaded zip files using the extractall() function  zipfile library.
 
 A single function is written which can download accepted data files from 2007-2016 as .csv. All the csv files will then be concatenated to a single Concatenated.csv file. The data will be extracted and downladed in a folder Data. Further we read these files in loan Dataframe.
