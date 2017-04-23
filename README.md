@@ -1,6 +1,6 @@
 # Lending-Club-Loan-Exploratory-Data-Analysis
 
-d replaced missing values with meanPart 1: Data Download
+Part 1: Data Download
 
 Our first step is to get the Lending club dataset from the Lending Club web site.
 To download the data that is available publicly from lending club site. https://www.lendingclub.com/info/download-data.action
