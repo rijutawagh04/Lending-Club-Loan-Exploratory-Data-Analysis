@@ -22,6 +22,7 @@ url
 adesc
 zipcode- since it contains onlky 3 digits and we have address state as another column
 out_prncp - Gives future information
+
 https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/gradetrends.PNGout_prncp_inv - Gives future information
 total_pymnt_inv - Gives future information
 
@@ -50,7 +51,9 @@ Columns Updated and cleaned:
 
 
 
-# Part 3: Data pre-processingConverting ‘issue_d’ to datetime format using pd.to_datetime
+# Part 3: Data pre-processing 
+
+Converting ‘issue_d’ to datetime format using pd.to_datetime
 I am creating new columns in the dataframe to store the below values:
 
 •	Issue month as issue_month
