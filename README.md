@@ -42,6 +42,7 @@ Columns Updated and cleaned:
 •	delinq_amnt – 99.98% of the data is zero. Only negligible records have any other values, so I replaced it by zero
 •	pub_rec_bankruptcies – All the empty rows are the ones which do not meet the credit policy and all are non-verified. With only negligible blanks, I replaced it by mean.
 
+
 •	tax_liens – These are the same 29 empty records as pub_rec_bankruptcies and so we processed a new column as “derived_tax_liens”.
 •	Interest_rate – Stripped the “%” and converted object datatype to float , so that analysis can be done on top of that 
 •       term-replaced missing value with max term period(i.e. 60)
@@ -51,6 +52,7 @@ Columns Updated and cleaned:
 
 Part 3: Data pre-processingConverting ‘issue_d’ to datetime format using pd.to_datetime
 I am creating new columns in the dataframe to store the below values:
+
 •	Issue month as issue_month
 •	Issue year as issue_year
 Derived Variables:
@@ -67,6 +69,16 @@ There is rapid increase in Loan B and E grade. Grade will be an important parame
 Increase in loan amount issued rapidly. There was a downfall during 2008-2010 due to economic depression.
 
 ![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/timeseries.png)
+
+Loan metrics by state showing the following:
+1. Average balance per borrower
+2. Average Employment term per borrower
+3. Average annual income per borrower
+
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/Map.png)
+
+
+![alt tag](https://github.com/rijutawagh04/Lending-Club-Loan-Exploratory-Data-Analysis/blob/master/final/images/map2.PNG)
 
 3. Analysis 3: Important to determine who will pay loan and who will default
 Meaning for each loan status-https://help.lendingclub.com/hc/en-us/articles/215488038
